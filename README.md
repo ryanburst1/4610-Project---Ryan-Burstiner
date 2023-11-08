@@ -325,20 +325,6 @@ Group by nationality
 
 ## Database information
 
-| Type | Query 1 | Query 2 | Query 3 | Query 4 | Query 5 | Query 6 | Query 7 | Query 8 | Query 9 | Query 10 |
-|------|---------|---------|---------|---------|---------|---------|---------|---------|---------|----------|
-| Multiple Table Join	|	| 	|	|	|	| X |	|	| X |	|
-| Traditional Subquery	|	| 	|	|	| X |	|	|	|	|	|
-| Correlated Subquery	|	| 	|	|	|	|	|	|	|	|	|
-| Group By	|	| 	|	|	|	|	|	| X |	|	|
-| Group By Having	| X | 	|	|	|	|	|	|	|	|	|
-| Multi Condition Where	|	| 	| X | X |	| X |	|	| X |	|
-| Built In Function	| X | 	|	|	| X |	|	| X |	|	|
-| Reg Exp	|	| 	|	| X | X | X | X |	|	|	|
-| Concat	|	| 	|	|	|	| X |	|	|	|	|
-
-
-
 | Type                   | Query 1 | Query 2 | Query 3 | Query 4 | Query 5 | Query 6 | Query 7 | Query 8 | Query 9 | Query 10 |
 |------------------------|---------|---------|---------|---------|---------|---------|---------|---------|---------|----------|
 | Multiple Table Join   |         |         |         |         |         |   X     |         |         |   X     |          |
