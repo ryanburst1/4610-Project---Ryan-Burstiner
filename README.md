@@ -269,9 +269,9 @@ Group by Position
 + ------------- + ------------------- +
 4 rows
 
-Query 9: Find the result of the games that england players have head injuries that are playing forward 
+Query 9: Find the result of the games that Italian players have head injuries and are playing goalkeeper
 
-Justification: There is a new regulation in England on concussions for their athletes so we need to make sure that we are vigilantly keeping up to date about their head injuries 
+Justification: There is a new regulation in Italy for concussions for their athletes,specifically goalkeepers, so we need to make sure that we are vigilantly keeping up to date about their head injuries 
 
 Execute:
 > Select result, injuryType, nationality, position 
@@ -289,7 +289,10 @@ And position IN ("Goalkeeper")
 + ----------- + --------------- + ---------------- + ------------- +
 1 rows
 
-Query 10: Find the number of players grouped by nationality who salaries are above the average salaries of players 
+Query 10: Find the number of players grouped by nationality whose salaries are above the average salaries of players 
+
+Justification:
+Management was curious to see what players from which countries are being paid the most, as a way to scout and identify talent.
 
 Execute:
 > Select nationality, COUNT(*) as Number_Of_Players from Players 
@@ -333,4 +336,19 @@ Group by nationality
 | Built In Function	| X | 	|	|	| X |	|	| X |	|	|
 | Reg Exp	|	| 	|	| X | X | X | X |	|	|	|
 | Concat	|	| 	|	|	|	| X |	|	|	|	|
+
+
+
+| Type                   | Query 1 | Query 2 | Query 3 | Query 4 | Query 5 | Query 6 | Query 7 | Query 8 | Query 9 | Query 10 |
+|------------------------|---------|---------|---------|---------|---------|---------|---------|---------|---------|----------|
+| Multiple Table Join   |         |         |         |         |         |   X     |         |         |   X     |          |
+| Traditional Subquery  |         |         |         |         |   X     |         |         |         |         |          |
+| Correlated Subquery   |         |         |         |         |         |         |         |         |         |          |
+| Group By              |         |         |         |         |         |         |         |   X     |         |          |
+| Group By Having       |   X     |         |         |         |         |         |         |         |         |          |
+| Multi Condition Where |         |         |   X     |   X     |         |   X     |         |         |   X     |          |
+| Built-In Function     |   X     |         |         |         |   X     |         |         |   X     |         |      X    |
+| Reg Exp               |         |         |         |   X     |   X     |   X     |   X     |         |         |          |
+| Concat                |         |         |         |         |         |   X     |         |         |         |          |
+
 
